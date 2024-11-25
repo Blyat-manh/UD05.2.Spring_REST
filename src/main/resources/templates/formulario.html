@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" xmnls:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Empleado</title>
+</head>
+<body>
+    <h1>Modificar Empleado</h1>
+    <form action="/empresa/empleados/modificar" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni">
+        <label for="sexo">Sexo:</label>
+        <input type="text" id="sexo" name="sexo">
+        <label for="categoria">Categoría:</label>
+        <input type="text" id="categoria" name="categoria">
+        <label for="aniosTrabajados">Años Trabajados:</label>
+        <input type="number" id="aniosTrabajados" name="aniosTrabajados">
+        <button type="submit">Modificar</button>
+    </form>
+    <a href="/empresa/">Volver</a>
+</body>
+</html>

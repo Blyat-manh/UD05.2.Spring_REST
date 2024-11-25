@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" xmnls:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario de un Empleado</title>
+</head>
+<body>
+    <h1>Mostrar Salario</h1>
+    <form action="/empresa/empleados/salario" method="post">
+        <label for="dni">DNI del empleado:</label>
+        <input type="text" id="dni" name="dni">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div th:if="${empleado}">
+        <h2>Empleado Encontrado</h2>
+        <p><strong>Nombre:</strong> <span th:text="${empleado.nombre}"></span></p>
+        <p><strong>Salario:</strong> <span th:text="${empleado.salario}"></span></p>
+    </div>
+
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
+
+    <a href="/empresa/">Volver</a>
+</body>
+</html>
